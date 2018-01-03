@@ -1,11 +1,15 @@
 {
   "name": "tiny-serverless-boillerplate",
-  "version": "0.0.2",
+  "version": "0.0.0-development",
   "keywords": [
     "cli"
   ],
   "bin": {
     "bot": "./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoanganh25991/bot-cmd.git"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
