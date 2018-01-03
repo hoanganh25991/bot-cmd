@@ -114,7 +114,19 @@ export const deployOffline = async () => {
 export const deployToAws = async () => {
   await buildYml()
   const cmd = "serverless deploy"
-  _(cpr.execSync(cmd).toString())
+  // _(cpr.execSync(cmd).toString())
+
+  const child = cpr.exec(cmd, {
+    // detachment and ignored stdin are the key here:
+    detached: true,
+    stdio: ["ignore", 1, 2]
+  })
+
+  child.unref()
+
+  child.stdout.on("data", function(data) {
+    console.log(data.toString())
+  })
 }
 
 /**

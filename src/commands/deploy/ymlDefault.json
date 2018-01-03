@@ -1,11 +1,11 @@
 {
-  "service": "lamda-by-serverless",
+  "service": "bot-boilerplate",
   "provider": {
     "name": "aws",
     "runtime": "nodejs6.10",
     "stage": "staging",
     "endpointType": "REGIONAL",
-    "provider": ".aws"
+    "credentials": "./.aws"
   },
   "plugins": [
     "serverless-offline"
