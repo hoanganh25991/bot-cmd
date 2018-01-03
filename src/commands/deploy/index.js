@@ -140,10 +140,15 @@ export const deployCmd = program => {
   program
     .command("deploy")
     .description("Deploy lambda function")
-    .action(async () => await deployToAws())
+    .option("--offline", "Offline")
+    .action(async options => {
+      const { offline } = options
 
-  program
-    .command("deploy:offline")
-    .description("Deploy lambda function")
-    .action(async () => await deployOffline())
+      if (offline) {
+        await deployOffline()
+        return
+      }
+
+      await deployToAws()
+    })
 }
