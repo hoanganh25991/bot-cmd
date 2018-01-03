@@ -35,12 +35,12 @@ export const checkAwsCredential = async () => {
     }
 
     const { awsKey, awsSecret } = await prompt(questions)
-    const cmd = `serverless config credentials --provider aws --key ${awsKey} --secret ${awsSecret} --override`
-    _(cpr.execSync(cmd).toString())
-
-    const homeDir = os.homedir()
-    const awsOriginDir = path.join(homeDir, ".aws")
-    fs.copySync(awsOriginDir, awsDir)
+    const credentialsFile = path.join(".aws", "credentials")
+    const credentialStr = `[default]
+aws_access_key_id = ${awsKey}
+aws_secret_access_key = ${awsSecret}
+`
+    fs.outputFileSync(credentialsFile, credentialStr)
   } catch (err) {
     _(`checkAwsCredential Fail`, err)
   }
