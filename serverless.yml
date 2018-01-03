@@ -20,7 +20,7 @@ functions:
       - http:
           path: welcome
           method: GET
-          cors: true
+#          cors: true
 
   hello2:
     handler: handler.hello2
@@ -32,4 +32,4 @@ functions:
       - http:
           path: welcome2
           method: GET
-          cors: true
+#          cors: true
