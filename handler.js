@@ -1,11 +1,19 @@
 const sayHello = require("./src/api")
 
 module.exports.hello = (event, context, callback) => {
-  const message = sayHello()
+  // const message = sayHello()
+  // const response = {
+  //   statusCode: 200,
+  //   body: JSON.stringify({
+  //     message,
+  //     input: event,
+  //   }),
+  // };
+
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message,
+      message: "hello",
       input: event,
     }),
   };
