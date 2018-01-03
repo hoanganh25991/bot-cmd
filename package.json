@@ -5,7 +5,7 @@
     "cli"
   ],
   "bin": {
-    "bot": "./src/index.js"
+    "bot": "./bin/index.js"
   },
   "repository": {
     "type": "git",

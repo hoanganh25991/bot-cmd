@@ -5,4 +5,4 @@ const _ = console.log
 const rootPath = path.join(__dirname, "..")
 
 _("[INFO] Run build")
-_(cpr.execSync(`babel ${rootPath}/src --out-dir=${rootPath}/dist`).toString())
+_(cpr.execSync(`babel ${rootPath}/src --out-dir=${rootPath}/bin`).toString())

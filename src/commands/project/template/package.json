@@ -1,5 +1,5 @@
 {
-  "name": "{{lambda-name}}",
+  "name": "lambda-name",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-inline-json-import": "^0.2.1",
@@ -8,7 +8,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.0",
     "prettier": "^1.4.4",
-    "tctav-bot-boilerplate": "next"
+    "tctav-bot-boilerplate": "latest"
   },
   "dependencies": {},
   "scripts": {

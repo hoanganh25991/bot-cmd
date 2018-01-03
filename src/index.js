@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import program from "commander"
 import { lambdaCmd } from "./commands/project"
 import { deployCmd } from "./commands/deploy"
