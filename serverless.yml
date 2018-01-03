@@ -23,12 +23,12 @@ functions:
           cors: true
 
   hello2:
-      handler: handler.hello2
-      events:
-        - http:
-            path: hello2
-            method: GET
-            cors: true
+    handler: handler.hello2
+    events:
+      - http:
+          path: hello2
+          method: GET
+          cors: true
       - http:
           path: welcome2
           method: GET
