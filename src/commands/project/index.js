@@ -10,25 +10,23 @@ const log = strs => {
 
 export const createFunc = name => console.log(`${name} created`)
 
-export const lambdaCmd = program => {
+export const projectCmd = program => {
   program
     .command("project:init <name>")
     .alias("init")
     .description("Init bot project")
-    .action(name => {
-      const projectDirExist = fs.pathExistsSync(name)
+    .action(projectName => {
+      const projectDir = projectName
+      const projectDirExist = fs.pathExistsSync(projectDir)
 
       if (projectDirExist) {
-        log([`Directory "${name}" already exist`, `Please update your project name`])
+        log([`Directory "${projectDir}" already exist`, `Please update your project name`])
         return
       }
 
-      const lambdaDir = path.join(name, "lambda")
-      fs.mkdirsSync(lambdaDir)
-
       const templateDir = path.join(__dirname, "template")
-      fs.copySync(templateDir, lambdaDir)
+      fs.copySync(templateDir, projectDir)
 
-      createFunc(name)
+      createFunc(projectDir)
     })
 }
