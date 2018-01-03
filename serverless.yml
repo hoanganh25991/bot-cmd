@@ -14,15 +14,22 @@ functions:
     handler: handler.hello
     events:
       - http:
-          path: hello222
+          path: hello
           method: GET
-          cors:
-            origin: '*'
-            headers:
-              - Content-Type
-              - X-Amz-Date
-              - Authorization
-              - X-Api-Key
-              - X-Amz-Security-Token
-              - X-Amz-User-Agent
-            allowCredentials: false
+          cors: true
+      - http:
+          path: welcome
+          method: GET
+          cors: true
+
+  hello2:
+      handler: handler.hello2
+      events:
+        - http:
+            path: hello2
+            method: GET
+            cors: true
+      - http:
+          path: welcome2
+          method: GET
+          cors: true
