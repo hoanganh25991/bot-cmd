@@ -10,7 +10,7 @@
  *      @link https://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html
  * @type {{}}
  */
-module.exports.handler = (event, data, callback) => {
+export const handler = (event, data, callback) => {
   /**
    * Sample response fot API Gateway trigger
    * @type {{}}
@@ -30,5 +30,16 @@ module.exports.handler = (event, data, callback) => {
   // callback(null); // Indicates success but no information returned to the caller.
   // callback(null, "success");  // Indicates success with information returned to the caller.
   // callback(error);    //  Indicates error with error information returned to the caller.
-  callback(response)
+  callback(null, response)
 }
+
+export const endpoints = [
+  {
+    path: "/hello",
+    method: "GET"
+  },
+  {
+    path: "/welcome",
+    method: "GET"
+  }
+]

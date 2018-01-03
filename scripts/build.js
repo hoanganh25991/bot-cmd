@@ -10,5 +10,5 @@ const binDir = path.join(rootPath, "bin")
 _("[INFO] Cp src")
 fs.copySync(srcDir, binDir)
 
-_("[INFO] Run build")
+_("[INFO] Run buildYml")
 _(cpr.execSync(`babel ${srcDir} --out-dir=${binDir}`).toString())

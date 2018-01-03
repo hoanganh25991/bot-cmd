@@ -1,10 +1,13 @@
 {
   "name": "bot-name",
   "devDependencies": {
-    "tctav-bot-boilerplate": "latest"
+    "tctav-bot-boilerplate": "latest",
+    "serverless-offline": "^3.16.0"
   },
   "scripts": {
     "start": "bot --help",
-    "bot":"bot"
+    "bot":"bot",
+    "deploy":"bot deploy",
+    "integrate":"bot integrate"
   }
 }

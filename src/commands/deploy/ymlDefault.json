@@ -1,0 +1,14 @@
+{
+  "service": "lamda-by-serverless",
+  "provider": {
+    "name": "aws",
+    "runtime": "nodejs6.10",
+    "stage": "staging",
+    "endpointType": "REGIONAL",
+    "provider": ".aws"
+  },
+  "plugins": [
+    "serverless-offline"
+  ],
+  "functions": {}
+}
