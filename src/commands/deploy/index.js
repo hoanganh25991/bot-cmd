@@ -59,9 +59,8 @@ export const buildYml = async () => {
   const { project: { name } } = botObj
   const ymlFileName = "serverless.yml"
   // const { endpoints } = { endpoints: [{ path: "/hello", method: "GET" }] }
-  const lambdaIndex = path.join("lambda", "index.js")
-  fs.copySync(lambdaIndex, path.join(__dirname, lambdaIndex))
-  const { endpoints } = require("./lambda/index")
+  const scriptsPath = path.resolve(process.cwd(), "lambda", "index.js")
+  const { endpoints } = require(scriptsPath)
 
   const httpEvents = endpoints.map(endpoint => {
     const { path, method } = endpoint
@@ -78,9 +77,11 @@ export const buildYml = async () => {
     }
   }
 
-  _("[ymlObj]", ymlObj)
-
   const ymlStr = YML.stringify(ymlObj, 10, 2)
+
+  // _("[ymlObj]", JSON.stringify(ymlObj, null, 2))
+  _("[ymlStr]", os.EOL, ymlStr)
+
   fs.outputFileSync(ymlFileName, ymlStr)
 }
 
