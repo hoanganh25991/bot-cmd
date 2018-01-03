@@ -13,9 +13,8 @@
   "dependencies": {},
   "scripts": {
     "precommit": "lint-staged",
-    "start": "yarn start:dev",
-    "test": "babel-node scripts/run-test",
-    "build": "babel-node scripts/build.js"
+    "start": "bot --help",
+    "bot":"bot"
   },
   "lint-staged": {
     "*.js": [
