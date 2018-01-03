@@ -1,16 +1,5 @@
 {
-  "name": "tiny-serverless-boillerplate",
-  "version": "0.0.1",
-  "keywords": [
-    "cli"
-  ],
-  "bin": {
-    "bot": "./src/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/hoanganh25991/bot-cmd.git"
-  },
+  "name": "{{lambda-name}}",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-inline-json-import": "^0.2.1",
@@ -20,14 +9,7 @@
     "lint-staged": "^4.0.0",
     "prettier": "^1.4.4"
   },
-  "dependencies": {
-    "commander": "^2.12.2",
-    "dotenv": "^4.0.0",
-    "fs-extra": "^5.0.0",
-    "inquirer": "^4.0.2",
-    "localtunnel": "^1.8.3",
-    "yamljs": "^0.3.0"
-  },
+  "dependencies": {},
   "scripts": {
     "precommit": "lint-staged",
     "start": "yarn start:dev",

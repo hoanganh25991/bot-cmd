@@ -1,10 +1,10 @@
 import program from "commander"
-import { lamdaCmd } from "./commands/lamda"
+import { lambdaCmd } from "./commands/lambda"
 import { deployCmd } from "./commands/deploy"
 import { desProgram, start } from "./commands/init"
 
 desProgram(program)
-lamdaCmd(program)
+lambdaCmd(program)
 deployCmd(program)
 
 start(program)
