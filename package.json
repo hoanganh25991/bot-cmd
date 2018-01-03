@@ -1,8 +1,11 @@
 {
-  "name": "node-vnexcoin",
-  "version": "0.0.0",
-  "bin":{
-    "bot":"./src/index.js"
+  "name": "tiny-serverless-boillerplate",
+  "version": "0.0.2",
+  "keywords": [
+    "cli"
+  ],
+  "bin": {
+    "bot": "./src/index.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -28,5 +31,7 @@
       "prettier --write --no-semi --print-width 120",
       "git add"
     ]
-  }
+  },
+  "author": "Anh Le Hoang",
+  "license": "MIT"
 }
