@@ -11,46 +11,22 @@
     "babel-preset-node7": "^1.5.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.0",
-    "nodemon": "^1.12.4",
     "prettier": "^1.4.4"
   },
   "dependencies": {
-    "body-parser": "~1.18.2",
-    "cookie-parser": "~1.4.3",
-    "cors": "^2.8.4",
-    "debug": "~2.6.9",
     "dotenv": "^4.0.0",
-    "express": "^4.16.2",
-    "firebase-admin": "^5.6.0",
-    "global": "^4.3.2",
-    "helmet": "^3.9.0",
-    "jsonwebtoken": "^8.1.0",
-    "localtunnel": "^1.8.3",
-    "moment": "^2.19.3",
-    "mongoose": "^4.13.2",
-    "morgan": "^1.9.0",
-    "sequelize": "^4.26.0",
-    "serve-favicon": "~2.4.5"
+    "localtunnel": "^1.8.3"
   },
   "scripts": {
     "precommit": "lint-staged",
-    "postmerge": "yarn build",
     "start": "yarn start:dev",
-    "start:dev": "nodemon dist/bin/www",
     "test": "babel-node scripts/run-test",
-    "build": "babel-node scripts/build.js",
-    "docs": "babel-node scripts/docs.js"
+    "build": "babel-node scripts/build.js"
   },
   "lint-staged": {
     "*.js": [
       "prettier --write --no-semi --print-width 120",
       "git add"
     ]
-  },
-  "nodemonConfig": {
-    "ignore": [
-      "src/*"
-    ],
-    "delay": "2500"
   }
 }
