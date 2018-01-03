@@ -24,7 +24,8 @@
     "commander": "^2.12.2",
     "dotenv": "^4.0.0",
     "inquirer": "^4.0.2",
-    "localtunnel": "^1.8.3"
+    "localtunnel": "^1.8.3",
+    "yamljs": "^0.3.0"
   },
   "scripts": {
     "precommit": "lint-staged",
