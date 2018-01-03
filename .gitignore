@@ -5,5 +5,8 @@ jspm_packages
 # Serverless directories
 .serverless
 
-# intelliJ
+# IntelliJ
 /.idea
+
+# Credential
+/.aws
