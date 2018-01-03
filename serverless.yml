@@ -16,7 +16,7 @@ functions:
       - http:
           path: hello
           method: GET
-          cors: true
+#          cors: true
       - http:
           path: welcome
           method: GET
@@ -28,7 +28,7 @@ functions:
       - http:
           path: hello2
           method: GET
-          cors: true
+#          cors: true
       - http:
           path: welcome2
           method: GET
