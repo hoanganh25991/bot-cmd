@@ -58,9 +58,11 @@ export const buildYml = async () => {
   const botObj = fs.readJSONSync(".bot.json")
   const { project: { name } } = botObj
   const ymlFileName = "serverless.yml"
+  // const { endpoints } = { endpoints: [{ path: "/hello", method: "GET" }] }
+  const lambdaIndex = path.join("lambda", "index.js")
+  fs.copySync(lambdaIndex, path.join(__dirname, lambdaIndex))
+  const { endpoints } = require("./lambda/index")
 
-  // const {endpoints} = require(`${__dirname}./lambda/index`)
-  const { endpoints } = { endpoints: [{ path: "/hello", method: "GET" }] }
   const httpEvents = endpoints.map(endpoint => {
     const { path, method } = endpoint
     return { http: { path, method } }
